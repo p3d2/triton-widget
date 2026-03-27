@@ -1,6 +1,12 @@
-// Toggle widget visibility when clicking the extension icon
-chrome.action.onClicked.addListener((tab) => {
-  if (tab.url && tab.url.includes('ondemand.triton.aalto.fi')) {
-    chrome.tabs.sendMessage(tab.id, { action: 'toggle-widget' });
-  }
-});
+{
+  "manifest_version": 3,
+  "name": "Triton Jobs Monitor",
+  "version": "1.0",
+  "description": "Shows active running jobs on Triton OnDemand",
+  "content_scripts": [
+    {
+      "matches": ["https://ondemand.triton.aalto.fi/*"],
+      "js": ["widget.js"]
+    }
+  ]
+}
