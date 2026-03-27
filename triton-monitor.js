@@ -10,7 +10,7 @@
   // 1. STATE
   // ==========================================
   let currentTab = 'running';
-  let currentInterval = 10000;
+  let currentInterval = 30000;
   let lastActivity = Date.now();
   let pipWindow = null;
   let fetchTimer = null;
