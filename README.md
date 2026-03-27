@@ -17,14 +17,14 @@ Since this isn't on the Chrome Web Store, you install it in **Developer Mode**:
 2. Open Chrome and go to `chrome://extensions/`
 3. Enable **Developer mode** (toggle in the top-right corner)
 4. Click **"Load unpacked"**
-5. Select the `triton-ext` folder
+5. Select the `triton-widget` folder
 6. Done! Navigate to https://ondemand.triton.aalto.fi and the widget
    appears in the bottom-right corner
 
 ### Updating
 
 When a new version is available:
-1. Replace the files in your `triton-ext` folder
+1. Replace the files in your `triton-widget` folder
 2. Go to `chrome://extensions/`
 3. Click the **reload** icon (↻) on the Triton Monitor card
 
@@ -92,7 +92,7 @@ OnDemand session.
 
 ### File Structure
 ```
-triton-ext/
+triton-widget/
 ├── manifest.json        # Chrome extension manifest (v3)
 ├── background.js        # Service worker (toolbar icon toggle)
 ├── triton-monitor.js    # The widget (content script)
@@ -105,7 +105,7 @@ triton-ext/
 ### Sharing with Others
 
 **Option A — Share the folder**
-Zip the `triton-ext` folder and share it via email, Slack, or
+Zip the `triton-widget` folder and share it via email, Slack, or
 your lab's shared drive. Recipients follow the installation
 steps above.
 
@@ -113,7 +113,7 @@ steps above.
 Push to a GitHub repo. Others can clone and load unpacked:
 ```bash
 git clone https://github.com/YOUR_USER/triton-monitor.git
-# Then load the triton-ext folder in chrome://extensions/
+# Then load the triton-widget folder in chrome://extensions/
 ```
 
 **Option C — Chrome Web Store** (optional)
