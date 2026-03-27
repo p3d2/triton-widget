@@ -1,0 +1,6 @@
+// Toggle widget visibility when clicking the extension icon
+chrome.action.onClicked.addListener((tab) => {
+  if (tab.url && tab.url.includes('ondemand.triton.aalto.fi')) {
+    chrome.tabs.sendMessage(tab.id, { action: 'toggle-widget' });
+  }
+});
